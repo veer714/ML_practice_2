@@ -1,76 +1,58 @@
-# Heart Disease Prediction - Exploratory Data Analysis (EDA)
+# ❤️ Heart Disease Prediction - EDA & Decision Tree Classifier
 
 ## 📌 Project Overview
-This project focuses on **Exploratory Data Analysis (EDA)** of a heart disease dataset to uncover patterns, correlations, and insights that can aid in building predictive machine learning models. The goal is to understand the dataset thoroughly before applying ML algorithms for classification.
+This project explores the **UCI Heart Disease Dataset** through **Exploratory Data Analysis (EDA)** and applies a **Decision Tree Classifier** to predict the presence of heart disease.  
+The workflow combines data cleaning, visualization, and machine learning to uncover insights and build a baseline predictive model.
 
 ---
 
 ## 📂 Dataset
-- **Source:** UCI Heart Disease Dataset (commonly used in ML research)
-- **Features:** Includes patient attributes such as age, sex, chest pain type, resting blood pressure, cholesterol levels, fasting blood sugar, ECG results, maximum heart rate, exercise-induced angina, ST depression, slope, number of major vessels, and thalassemia.
-- **Target Variable:** Presence or absence of heart disease.
+- **Source:** UCI Heart Disease Dataset
+- **Features:** Age, sex, chest pain type, blood pressure, cholesterol, fasting blood sugar, ECG results, max heart rate, exercise-induced angina, ST depression, slope, number of major vessels, thalassemia.
+- **Target Variable:** Presence (1) or absence (0) of heart disease.
 
 ---
 
-## 🔍 EDA Workflow
+## 🔍 Workflow
 1. **Data Cleaning**
-   - Handling missing values
-   - Encoding categorical variables
-   - Normalization/standardization of numerical features
+   - Handle missing values
+   - Encode categorical variables
+   - Normalize/standardize numerical features
 
-2. **Univariate Analysis**
-   - Distribution plots for age, cholesterol, blood pressure
-   - Frequency counts for categorical features
+2. **Exploratory Data Analysis (EDA)**
+   - Univariate analysis (distributions, counts)
+   - Bivariate/multivariate analysis (correlation heatmaps, pairplots)
+   - Feature importance visualization
 
-3. **Bivariate & Multivariate Analysis**
-   - Correlation heatmaps
-   - Pairplots to visualize feature interactions
-   - Grouped statistics by target variable
+3. **Decision Tree Classifier**
+   - Train/test split
+   - Model training using scikit-learn
+   - Hyperparameter tuning (max depth, min samples split)
+   - Performance evaluation (accuracy, precision, recall, F1-score)
 
-4. **Feature Engineering**
-   - Creating derived features (e.g., age groups, risk categories)
-   - Checking feature importance
-
-5. **Visualization**
+4. **Visualization**
    - Histograms, boxplots, violin plots
-   - Heatmaps for correlation
-   - Bar charts for categorical distributions
+   - Correlation heatmaps
+   - Decision Tree visualization
 
 ---
 
 ## ⚙️ Tools & Libraries
 - **Python**
-- **Pandas** – data manipulation
-- **NumPy** – numerical operations
-- **Matplotlib & Seaborn** – visualization
-- **Scikit-learn** – preprocessing utilities
+- **Pandas, NumPy** – data handling
+- **Matplotlib, Seaborn** – visualization
+- **Scikit-learn** – Decision Tree, preprocessing, evaluation
 
 ---
 
 ## 📊 Key Insights
-- Certain features (e.g., chest pain type, maximum heart rate, ST depression) show strong correlation with heart disease.
-- Lifestyle-related factors like cholesterol and exercise-induced angina are significant predictors.
-- Feature scaling improves interpretability for ML models.
+- Features like **chest pain type, max heart rate, ST depression** strongly influence predictions.
+- The **Decision Tree Classifier** provides interpretable rules for classification.
+- Model performance highlights potential for improvement with ensemble methods (Random Forest, Gradient Boosting).
 
 ---
 
 ## 🚀 Next Steps
-- Apply classification models (Logistic Regression, Random Forest, XGBoost).
-- Evaluate performance using metrics like accuracy, precision, recall, F1-score, and ROC-AUC.
-- Optimize models with hyperparameter tuning.
-
----
-
-## 📎 How to Run
-```bash
-# Clone the repository
-git clone https://github.com/veer714/ML_practice_2.git
-
-# Navigate to project folder
-cd ML_practice_2
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the notebook
-jupyter notebook Heart_Disease_EDA.ipynb
+- Compare Decision Tree with other classifiers (Logistic Regression, Random Forest, SVM).
+- Apply cross-validation for robust performance metrics.
+- Optimize preprocessing and feature engineering for better accuracy.
